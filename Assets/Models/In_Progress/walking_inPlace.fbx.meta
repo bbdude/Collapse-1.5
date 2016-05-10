@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 1e41c6f559074d246b089cec611acfbf
+timeCreated: 1437684171
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: MaleBaseMesh:Head
+    100002: MaleBaseMesh:HeadTop_End
+    100004: MaleBaseMesh:Hips
+    100006: MaleBaseMesh:LeftArm
+    100008: MaleBaseMesh:LeftFoot
+    100010: MaleBaseMesh:LeftForeArm
+    100012: MaleBaseMesh:LeftHand
+    100014: MaleBaseMesh:LeftHandIndex1
+    100016: MaleBaseMesh:LeftHandIndex2
+    100018: MaleBaseMesh:LeftHandIndex3
+    100020: MaleBaseMesh:LeftHandIndex4
+    100022: MaleBaseMesh:LeftHandMiddle1
+    100024: MaleBaseMesh:LeftHandMiddle2
+    100026: MaleBaseMesh:LeftHandMiddle3
+    100028: MaleBaseMesh:LeftHandMiddle4
+    100030: MaleBaseMesh:LeftHandPinky1
+    100032: MaleBaseMesh:LeftHandPinky2
+    100034: MaleBaseMesh:LeftHandPinky3
+    100036: MaleBaseMesh:LeftHandPinky4
+    100038: MaleBaseMesh:LeftHandRing1
+    100040: MaleBaseMesh:LeftHandRing2
+    100042: MaleBaseMesh:LeftHandRing3
+    100044: MaleBaseMesh:LeftHandRing4
+    100046: MaleBaseMesh:LeftHandThumb1
+    100048: MaleBaseMesh:LeftHandThumb2
+    100050: MaleBaseMesh:LeftHandThumb3
+    100052: MaleBaseMesh:LeftHandThumb4
+    100054: MaleBaseMesh:LeftLeg
+    100056: MaleBaseMesh:LeftShoulder
+    100058: MaleBaseMesh:LeftToe_End
+    100060: MaleBaseMesh:LeftToeBase
+    100062: MaleBaseMesh:LeftUpLeg
+    100064: MaleBaseMesh:Neck
+    100066: MaleBaseMesh:RightArm
+    100068: MaleBaseMesh:RightFoot
+    100070: MaleBaseMesh:RightForeArm
+    100072: MaleBaseMesh:RightHand
+    100074: MaleBaseMesh:RightHandIndex1
+    100076: MaleBaseMesh:RightHandIndex2
+    100078: MaleBaseMesh:RightHandIndex3
+    100080: MaleBaseMesh:RightHandIndex4
+    100082: MaleBaseMesh:RightHandMiddle1
+    100084: MaleBaseMesh:RightHandMiddle2
+    100086: MaleBaseMesh:RightHandMiddle3
+    100088: MaleBaseMesh:RightHandMiddle4
+    100090: MaleBaseMesh:RightHandPinky1
+    100092: MaleBaseMesh:RightHandPinky2
+    100094: MaleBaseMesh:RightHandPinky3
+    100096: MaleBaseMesh:RightHandPinky4
+    100098: MaleBaseMesh:RightHandRing1
+    100100: MaleBaseMesh:RightHandRing2
+    100102: MaleBaseMesh:RightHandRing3
+    100104: MaleBaseMesh:RightHandRing4
+    100106: MaleBaseMesh:RightHandThumb1
+    100108: MaleBaseMesh:RightHandThumb2
+    100110: MaleBaseMesh:RightHandThumb3
+    100112: MaleBaseMesh:RightHandThumb4
+    100114: MaleBaseMesh:RightLeg
+    100116: MaleBaseMesh:RightShoulder
+    100118: MaleBaseMesh:RightToe_End
+    100120: MaleBaseMesh:RightToeBase
+    100122: MaleBaseMesh:RightUpLeg
+    100124: MaleBaseMesh:Spine
+    100126: MaleBaseMesh:Spine1
+    100128: MaleBaseMesh:Spine2
+    100130: //RootNode
+    400000: MaleBaseMesh:Head
+    400002: MaleBaseMesh:HeadTop_End
+    400004: MaleBaseMesh:Hips
+    400006: MaleBaseMesh:LeftArm
+    400008: MaleBaseMesh:LeftFoot
+    400010: MaleBaseMesh:LeftForeArm
+    400012: MaleBaseMesh:LeftHand
+    400014: MaleBaseMesh:LeftHandIndex1
+    400016: MaleBaseMesh:LeftHandIndex2
+    400018: MaleBaseMesh:LeftHandIndex3
+    400020: MaleBaseMesh:LeftHandIndex4
+    400022: MaleBaseMesh:LeftHandMiddle1
+    400024: MaleBaseMesh:LeftHandMiddle2
+    400026: MaleBaseMesh:LeftHandMiddle3
+    400028: MaleBaseMesh:LeftHandMiddle4
+    400030: MaleBaseMesh:LeftHandPinky1
+    400032: MaleBaseMesh:LeftHandPinky2
+    400034: MaleBaseMesh:LeftHandPinky3
+    400036: MaleBaseMesh:LeftHandPinky4
+    400038: MaleBaseMesh:LeftHandRing1
+    400040: MaleBaseMesh:LeftHandRing2
+    400042: MaleBaseMesh:LeftHandRing3
+    400044: MaleBaseMesh:LeftHandRing4
+    400046: MaleBaseMesh:LeftHandThumb1
+    400048: MaleBaseMesh:LeftHandThumb2
+    400050: MaleBaseMesh:LeftHandThumb3
+    400052: MaleBaseMesh:LeftHandThumb4
+    400054: MaleBaseMesh:LeftLeg
+    400056: MaleBaseMesh:LeftShoulder
+    400058: MaleBaseMesh:LeftToe_End
+    400060: MaleBaseMesh:LeftToeBase
+    400062: MaleBaseMesh:LeftUpLeg
+    400064: MaleBaseMesh:Neck
+    400066: MaleBaseMesh:RightArm
+    400068: MaleBaseMesh:RightFoot
+    400070: MaleBaseMesh:RightForeArm
+    400072: MaleBaseMesh:RightHand
+    400074: MaleBaseMesh:RightHandIndex1
+    400076: MaleBaseMesh:RightHandIndex2
+    400078: MaleBaseMesh:RightHandIndex3
+    400080: MaleBaseMesh:RightHandIndex4
+    400082: MaleBaseMesh:RightHandMiddle1
+    400084: MaleBaseMesh:RightHandMiddle2
+    400086: MaleBaseMesh:RightHandMiddle3
+    400088: MaleBaseMesh:RightHandMiddle4
+    400090: MaleBaseMesh:RightHandPinky1
+    400092: MaleBaseMesh:RightHandPinky2
+    400094: MaleBaseMesh:RightHandPinky3
+    400096: MaleBaseMesh:RightHandPinky4
+    400098: MaleBaseMesh:RightHandRing1
+    400100: MaleBaseMesh:RightHandRing2
+    400102: MaleBaseMesh:RightHandRing3
+    400104: MaleBaseMesh:RightHandRing4
+    400106: MaleBaseMesh:RightHandThumb1
+    400108: MaleBaseMesh:RightHandThumb2
+    400110: MaleBaseMesh:RightHandThumb3
+    400112: MaleBaseMesh:RightHandThumb4
+    400114: MaleBaseMesh:RightLeg
+    400116: MaleBaseMesh:RightShoulder
+    400118: MaleBaseMesh:RightToe_End
+    400120: MaleBaseMesh:RightToeBase
+    400122: MaleBaseMesh:RightUpLeg
+    400124: MaleBaseMesh:Spine
+    400126: MaleBaseMesh:Spine1
+    400128: MaleBaseMesh:Spine2
+    400130: //RootNode
+    7400000: mixamo.com
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
