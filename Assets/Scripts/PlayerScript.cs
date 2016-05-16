@@ -31,12 +31,10 @@ public class PlayerScript : MonoBehaviour {
 	private void moveLeft(float speed) {
 		transform.localPosition -= transform.right * speed * Time.deltaTime;
     }
-	// Update is called once per frame
+
 	void Update () {
 		
-		//Screen.lockCursor = true;
 		Cursor.lockState = CursorLockMode.Locked;
-		//Screen.lockCursor = false;
 
 		myCamera.transform.position = this.transform.position;
 

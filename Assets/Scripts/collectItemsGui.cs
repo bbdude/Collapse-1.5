@@ -16,6 +16,7 @@ public class collectItemsGui : MonoBehaviour{
 	{
 		Items item;
 		item = new Items(amount);
+        bool show = true;
 		switch(type)
 		{
 		case "plank":
@@ -38,12 +39,16 @@ public class collectItemsGui : MonoBehaviour{
 			item.item = mast;
 			item.type = "mast";
 			break;
+        case "enemy":
+            show = false;
+            break;
 		default:
 			break;
         }
 		item.back = back;
 		item.pos = new Rect(0,Screen.height - 25,200,25);
-		
+        if (!show)
+            return;
 		if (listOfItems.Count > 0)
 		{
 			foreach (Items temp in listOfItems)

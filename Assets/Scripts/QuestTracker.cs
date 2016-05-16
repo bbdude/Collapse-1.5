@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 public class Quest
 {
@@ -29,42 +28,85 @@ public class Quest
 public class collectingQuest : Quest
 {
 
-	int collect = 0;
-	int max = 0;
-	string type = "";
-	public string text = "";
-	public string textVar = "";
+    int collect = 0;
+    int max = 0;
+    string type = "";
+    public string text = "";
+    public string textVar = "";
 
-	public collectingQuest(int maxCollect,string typeCollect)
-	{
-		max = maxCollect;
-		type = typeCollect;
-	}
-	public override void addCollect(int amount, string typeCollect)
-	{
-		if (type == typeCollect)
-			collect += amount;
-	}
+    public collectingQuest(int maxCollect, string typeCollect)
+    {
+        max = maxCollect;
+        type = typeCollect;
+    }
+    public override void addCollect(int amount, string typeCollect)
+    {
+        if (type == typeCollect)
+            collect += amount;
+    }
 
-	public override bool check(Vector3 one){
-		if (collect >= max)
-		{
-			return true;
-		}
-		return false;
-	}
-	public override string textToDisplay()
-	{
-		return "Collected: " + collect.ToString() + "/" + max.ToString();
-	}
-	public override void Draw()
-	{
-		GUI.color = Color.black;
-		Rect tempPos = pos;
-		tempPos.y += 25;
-		GUI.Label(pos,"Collect " + max.ToString() + " " + type);
-		GUI.Label(tempPos,textToDisplay());
-	}
+    public override bool check(Vector3 one)
+    {
+        if (collect >= max)
+        {
+            return true;
+        }
+        return false;
+    }
+    public override string textToDisplay()
+    {
+        return "Collected: " + collect.ToString() + "/" + max.ToString();
+    }
+    public override void Draw()
+    {
+        GUI.color = Color.black;
+        Rect tempPos = pos;
+        tempPos.y += 25;
+        GUI.Label(pos, "Collect " + max.ToString() + " " + type);
+        GUI.Label(tempPos, textToDisplay());
+    }
+
+}
+public class killingQuest : Quest
+{
+
+    int collect = 0;
+    int max = 0;
+    string type = "";
+    public string text = "";
+    public string textVar = "";
+
+    public killingQuest(int maxCollect, string typeCollect)
+    {
+        max = maxCollect;
+        type = typeCollect;
+    }
+    public override void addCollect(int amount, string typeCollect)
+    {
+        if (type == typeCollect)
+            collect += amount;
+    }
+
+    public override bool check(Vector3 one)
+    {
+        if (collect >= max)
+        {
+            return true;
+        }
+        return false;
+    }
+    public override string textToDisplay()
+    {
+        return "Kill: " + collect.ToString() + "/" + max.ToString();
+    }
+    public override void Draw()
+    {
+        GUI.color = Color.black;
+        Rect tempPos = pos;
+        tempPos.y += 25;
+        GUI.Label(pos, "Kill " + max.ToString() + " " + type);
+        GUI.Label(tempPos, textToDisplay());
+    }
 
 }
 public class locationQuest : Quest

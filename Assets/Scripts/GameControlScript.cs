@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class GameControlScript : MonoBehaviour {
@@ -17,20 +18,14 @@ public class GameControlScript : MonoBehaviour {
 	//private bool unfadeRunning = false;
 
 	public bool[] lockBar = new bool[2];
-	public collectItemsGui cIGUI;// = new collectItemsGui();
+	public collectItemsGui cIGUI;
 	public QuestTracker questTracker;
 	int questAdvancement = 0;
-	//[SerializeField]
-	//public collectItemsGui cIGUI;
-	//List<Texture2D> collectedItemsGui = new List<Texture2D>();
-	//List<Rect> collectedItemsPos = new List<Rect>();
-	//public float showingalpha;
 	
 	void OnGUI()
 	{ 
 		GUI.color = guiColor;
 		GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height), border);
-		//GUI.color = new Color(0,0,0,250);
 		for (int i = 0; i < 4; i++)
 		{
 			GUI.color = Color.white;
@@ -43,15 +38,7 @@ public class GameControlScript : MonoBehaviour {
 			GUI.DrawTexture(barPosition[i], bars[i]);
 			if (i == 1 || i == 3)
 				GUI.EndGroup();
-			//GUI.DrawTextureWithTexCoords(barPosition[i], bars[i],barCoords[i]);
 		}
-		/*int loop = 0;
-		foreach (Rect rect in collectedItemsPos)
-		{
-			GUI.color = Color.white;
-			GUI.DrawTexture(rect,collectedItemsGui[loop]);
-			loop++;
-		}*/
 		foreach (Items items in cIGUI.listOfItems)
 		{
 			if (items != null)
@@ -61,10 +48,7 @@ public class GameControlScript : MonoBehaviour {
 		}
 		foreach (Quest quest in questTracker.questList)
 		{
-			//if (quest != null)
-			//{
 				quest.Draw();
-			//}
 		}
 		for (int i = cIGUI.listOfItems.Count - 1; i >= 0; i--)
 		{
@@ -93,11 +77,15 @@ public class GameControlScript : MonoBehaviour {
 		}
 		case 1:
 		{
-			locForQuest[1].SetActive(true);
-			locationQuest tempLQue = new locationQuest(locForQuest[1].transform.position,locForQuest[1].transform.localScale.x/2,"Shacks");
-			questTracker.questList.Add(tempLQue);
+            createLocQuest(1, "Shack");
+            createCollectQuest(10, "plank");
+            createCollectQuest(30, "nails");
+            createQuestSet();
+            //locForQuest[1].SetActive(true);
+			//locationQuest tempLQue = new locationQuest(locForQuest[1].transform.position,locForQuest[1].transform.localScale.x/2,"Shacks");
+			//questTracker.questList.Add(tempLQue);
 
-			collectingQuest tempCQue = new collectingQuest(10,"plank");
+			/*collectingQuest tempCQue = new collectingQuest(10,"plank");
 			questTracker.questList.Add(tempCQue);
 
 			collectingQuest tempCQueTwo = new collectingQuest(30,"nails");
@@ -111,17 +99,24 @@ public class GameControlScript : MonoBehaviour {
 					i++;
 				}
 			}
-			questAdvancement++;
+			questAdvancement++;*/
 			break;
 		}
 		case 3:
 		{
-			locForQuest[1].SetActive(false);
+            createLocQuest(1, "", false);
+			//locForQuest[1].SetActive(false);
 			break;
 		}
 		case 5:
 		{
-			locForQuest[2].SetActive(true);
+                    createLocQuest(2, "Shacks");
+                    createCollectQuest(1, "map");
+                    createCollectQuest(1, "mast");
+                    createQuestSet();
+
+
+                    /*locForQuest[2].SetActive(true);
 			locationQuest tempLQue = new locationQuest(locForQuest[2].transform.position,locForQuest[2].transform.localScale.x/2,"Shacks");
 			questTracker.questList.Add(tempLQue);
 
@@ -142,19 +137,23 @@ public class GameControlScript : MonoBehaviour {
 			}
 			//tempCQue = new collectingQuest(1,"fishing pole");
 			//questTracker.questList.Add(tempCQue);
-			questAdvancement++;
+			questAdvancement++;*/
 			break;
 		}
 		case 9:
 		{
-			locForQuest[2].SetActive(false);
-			locForQuest[0].SetActive(true);
+            createLocQuest(2, "Shacks",false);
+            //createLocQuest(0, "Shacks",true);
+            //        locForQuest[2].SetActive(false);
+			//locForQuest[0].SetActive(true);
 			questAdvancement++;
 			break;
 		}
 		case 10:
 		{
-			locationQuest tempLQue = new locationQuest(locForQuest[0].transform.position,locForQuest[0].transform.localScale.x/2,"Jetty");
+            createLocQuest(0, "Jetty");
+            createQuestSet();
+            /*locationQuest tempLQue = new locationQuest(locForQuest[0].transform.position,locForQuest[0].transform.localScale.x/2,"Jetty");
 			questTracker.questList.Add(tempLQue);
 			if (questTracker.questList.Count > 0)
 			{
@@ -163,27 +162,14 @@ public class GameControlScript : MonoBehaviour {
 					temp.pos.y -= 50;
 				}
 			}
-			questAdvancement++;
+			questAdvancement++;*/
 			break;
-			/*collectingQuest tempCQue = new collectingQuest(1,"boat");
-			questTracker.questList.Add(tempCQue);
-			
-			if (questTracker.questList.Count > 0)
-			{
-				foreach (collectingQuest temp in questTracker.questList)
-				{
-					temp.pos.y -= 50;
-				}
-			}
-			tempCQue = new collectingQuest(30,"nails");
-			questTracker.questList.Add(tempCQue);
-			questAdvancement++;
-			break;*/
 		}
 		case 12:
 		{
-			locForQuest[0].SetActive(false);
-			Application.LoadLevel("BoatCreation");
+            createLocQuest(0, "Jetty",false);
+            //locForQuest[0].SetActive(false);
+			SceneManager.LoadScene("BoatCreation");
 			break;
 		}
 		default:
@@ -221,13 +207,47 @@ public class GameControlScript : MonoBehaviour {
 		}
 		//unfadeRunning = false;
 	}
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    
+    void createCollectQuest(int amountNeeded, string name)
+    {
+        collectingQuest tempCQue = new collectingQuest(amountNeeded, name);
+        questTracker.questList.Add(tempCQue);
+        return;
+    }
+    void createKillQuest(int amountNeeded,string name)
+    {
+        killingQuest tempCQue = new killingQuest(amountNeeded, name);
+        questTracker.questList.Add(tempCQue);
+        return;
+    }
+    void createLocQuest(int locToEnable, string name, bool enable = true)
+    {
+        locForQuest[locToEnable].SetActive(enable);
+        if (!enable)
+            return;
+        locationQuest tempLQue = new locationQuest(locForQuest[locToEnable].transform.position, locForQuest[locToEnable].transform.localScale.x / 2, name);
+        questTracker.questList.Add(tempLQue);
+
+        return;
+    }
+    //run after every set of createQuest funtions
+    void createQuestSet(bool advance = true, int howMuch = 1)
+    {
+        int i = 0;
+        if (questTracker.questList.Count > 0)
+        {
+            foreach (Quest temp in questTracker.questList)
+            {
+                temp.pos.y += 50 * i;
+                i++;
+            }
+        }
+        if (advance)
+            questAdvancement += howMuch;
+        return;
+    }
+
+    void Update () {
 		/*if (Input.GetKeyUp(KeyCode.Q))
 		{
 			if (fadeStep == 0)
